@@ -15,9 +15,10 @@
   
   --blue: rgb(90, 115, 139);  
   --lightblue: #b1c6d9;
-  --darkblue: rgb(100, 113, 131);
+  --darkblue: rgb(37, 11, 0);
   --darkblue2:#182d4eed;
   --green: rgb(45, 111, 98);
+  --brown: rgb(37, 11, 0);
  
   /* --green: rgb(51, 96, 87); */
 
@@ -40,7 +41,7 @@
 
    --product-bg: linear-gradient(
     to top,
-    var(--blue) 10%,
+    var(--brown) 10%,
     white) 90%;
 
    --product-main-bg: linear-gradient(
@@ -137,7 +138,7 @@ a{
 }
 
 a:focus{
-  outline: var(--darkblue);
+  outline: var(--brown);
 }
 
 a:visited{
@@ -238,7 +239,7 @@ button{
   width: 0%;
   content: '.';
   color: transparent;
-  background: var(--green);
+  background: var(--brown);
   height: 2px;
 }
 
@@ -294,14 +295,14 @@ nav a::before {
   position: relative;
   margin: auto;
   padding-bottom: .5em;
-  border-bottom: 2px solid var(--darkblue);
+  border-bottom: 2px solid var(--brown);
   border-radius: 5%;
   width: fit-content;
   transition: border-bottom 200ms ease-in-out;
 }
 
 .dropdown-nav ul li:hover{
-  border-bottom: var(--darkblue) solid 7px;
+  border-bottom: var(--brown) solid 7px;
 }
 
 .dropdown-nav ul li a{
@@ -384,7 +385,7 @@ header > h1{
 
 .main-header a{
   color: var(--white);
-  background-color: var(--green);
+  background-color: var(--brown);
   padding: .5em 1.5em;
   padding-right: 3.5em;
   border-radius: 7em 150% 200% 2em;
@@ -430,46 +431,93 @@ header > h1{
   gap: 2em;
   color: var(--white);
   background: var(--product-main-bg);
-  /* border: aliceblue solid 3px; */
   padding: 5em;
-  border-radius: 2px 3em;
+  border-radius: 2px;
   font-size: .9em;
   font-weight: 600;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.548);
 }
 
-#main-products article{
+#main-products article .flip-card{
   display: flex;
   flex-direction: column;
   color: var(--white);
-  background: var(--product-bg);
-  opacity: 80%;
-  padding-bottom: 2em;
-  /* width: 25em; */
-  border-radius: 2px 2px 2% 2%;
-  transition: all 150ms ease-out;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px 2px 2px 2px;
+  transition: all 1s ease-out;
   margin: auto;
+  cursor: pointer;
 }
 
 #main-products article > *:not(img){
   margin: 1em auto .2em;
 }
 
-#main-products article:hover{
-  transform: scale(1.05);
-  cursor: pointer;
+#main-products article h3,
+#main-products article p{
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  display: none;
 }
+
+/* #main-products article:hover{
+  padding-bottom: 2em;
+} */
+/* 
+#main-products article:hover h3,
+#main-products article:hover p{
+  display: block;
+  cursor: pointer;
+  opacity: 1;
+} */
 
 #main-products header{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: orange solid 3px; */
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 #main-products header h2{
   color: var(--white);
-  font-size: var(--largefont);
+  font-size: 7em;
+}
+
+.flip-card  {
+  background-color: transparent;
+  perspective: 2000px;
+}
+
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 1s;
+}
+
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front{
+  background-color: var(--white);
+}
+
+.flip-card-back {
+  background-color: var(--black);
+  color: black;
+  transform: rotateY(180deg);
 }
 
 @media (min-device-width: 1024px){
@@ -582,7 +630,7 @@ and (max-device-width: 1240px)
     top: 0;
     width: 100vw;
     padding: 0;
-    background: var(--blue);
+    background: var(--brown);
     transform: translateX(100%);
     transition: transform 500ms ease-in-out;
   }
@@ -608,7 +656,7 @@ and (max-device-width: 1240px)
     bottom: 0;
     height: 4px;
     border-radius: 50%;
-    background-color: var(--darkblue2);
+    background-color: var(--brown);
     opacity: .5;
   }
 
