@@ -514,10 +514,21 @@ header > h1{
   background-color: var(--white);
   color: black;
   transform: rotateY(180deg);
-  opacity: 90%;
+  /* opacity: 98%; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.flip-card-back button{
+  background: var(--brown);
+  color: var(--white);
+  border-radius: 2px;
+  width: fit-content;
+  /* margin: auto; */
+  align-self: center;
+  padding: .7em 2em;
+  font-family: 'Canterbury';
 }
 
 @media (min-device-width: 1024px){
