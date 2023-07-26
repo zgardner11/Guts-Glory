@@ -12,22 +12,13 @@
 :root {
 
   --white:#e7e2e2;
-  
-  --blue: rgb(90, 115, 139);  
-  --lightblue: #b1c6d9;
-  --darkblue: rgb(37, 11, 0);
-  --darkblue2:#182d4eed;
-  --green: rgb(45, 111, 98);
+  --black: rgb(4, 4, 4);
   --brown: #4e2a2a;
- 
-  /* --green: rgb(51, 96, 87); */
-
+  
+  --blue: #42969e;  
+  --green: #5ebf9b;
   --indigo:#171625;
   --purple: #070011fa;
-  /* --purple: #11002b; */
-
-  --black: rgb(4, 4, 4);
-  
 
   --main-bg-color: linear-gradient(
    to bottom,
@@ -52,7 +43,7 @@
   --headerfont: 3.5rem;
   --largefont: 2.75rem;
   --mediumfont: 2.2rem;
-  --smallfont: 1.5rem;
+  --smallfont: 1.25rem;
   --textfont: 1rem;
 
   font-family: 'Cormorant Garamond', serif;
@@ -60,6 +51,9 @@
   font-family: 'Noto Sans JP', sans-serif;
   font-family: 'Pirata One', cursive;
   font-family: 'UnifrakturMaguntia', cursive;
+
+  --card-height: 50em;
+  --mobile-card-height: calc(var(--card-height)*.5)
 }
 
 /* General */
@@ -169,17 +163,11 @@ button{
   justify-content: space-between;
   align-items: center;
   top: 0;
-  height: 7em;
+  height: 7rem;
   margin-right: auto;
   background-color: var(--white);
   font-family: 'Canterbury', serif;
   z-index: 1111;
-}
-
-#logo{
-  position: relative;
-  width: 10em;
-  top: 2.5em;
 }
 
 .navlinks{
@@ -205,7 +193,7 @@ button{
 
 .navlinks-menu > li > a{
   display: flex;
-  color: var(--purple);
+  color: var(--brown);
   opacity: 59%;
   font-weight: 700;
   padding: 1rem;
@@ -227,7 +215,7 @@ button{
   display: block;
   visibility: visible;
   opacity: 1;
-  background: var(--purple);
+  background: var(--white);
 }
 
 .navlinks-menu > li > a::after{
@@ -253,24 +241,19 @@ nav a::before {
   border-right: var(--silverblue) solid 2px;
 }
 
-#logo-nav-outer{
-  display: flex;
-  width: 7em;
-}
-
 .dropdown-nav{
   position: absolute;
-  padding: 1em 0;
+  padding: 1em 2em;
   left: 0;
   right: 0;
-  width: 15em;
+  width: 100%;
   margin: auto;
-  margin-top: 1.3em;
+  top: 5rem;
   height: fit-content;
   opacity: 0;
   visibility: hidden;
   transition: 420ms all ease-in-out;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 2px 2px;
   z-index: 9999;
 }
 
@@ -281,33 +264,30 @@ nav a::before {
   align-items: flex-start;
   min-width: fit-content;
   margin: auto;
-  font-weight: 700;
+  font-weight: 100;
   gap: 3em;
   padding: 1em .5em;
-}
-
-.navlinks li:first-child .dropdown-nav ul{
-  padding-left: 1.5em;
-  /* add extra spacing on first dropdown navigation menu */
 }
 
 .dropdown-nav ul li{
   position: relative;
   margin: auto;
-  padding-bottom: .5em;
+  padding-bottom: .2em;
   border-bottom: 2px solid var(--brown);
   border-radius: 5%;
   width: fit-content;
   transition: border-bottom 200ms ease-in-out;
+  text-align: center;
 }
 
 .dropdown-nav ul li:hover{
-  border-bottom: var(--brown) solid 7px;
+  border-bottom: var(--white) solid 7px;
 }
 
 .dropdown-nav ul li a{
-  color: var(--white);
-  opacity: 59%;
+  color: var(--brown);
+  opacity: 75%;
+  font-size: var(--smallfont);
 }
 
 .dropdown-nav ul li a:hover{
@@ -316,6 +296,18 @@ nav a::before {
 
 .navlinks .active-nav{
   font-size: 1.03em;
+}
+
+/* Logo */
+
+#logo{
+  position: relative;
+  width: 7em;
+  top: .5em;
+}
+
+#logo-mobile-outer{
+  display: none;
 }
 
 /* Index */
@@ -360,12 +352,11 @@ header > h1{
   justify-content: center;
   align-items: center;
   color: var(--white);
-  /* max-height: 60em; */
-  /* border: black solid 3px; */
 }
 
 #main-content article h2{
   font-size: var(--headerfont);
+  text-align: center;
 }
 
 .main-header{
@@ -426,10 +417,9 @@ header > h1{
   flex-direction: column;
   display: flex;
   margin: 7em auto;
-  width: 72%;
+  width: 75%;
   gap: 2em 2em;
   color: var(--white);
-  /* padding: 5em; */
   border-radius: 2px;
   font-size: .9em;
   font-weight: 400;
@@ -443,7 +433,7 @@ header > h1{
   flex-direction: column;
   color: var(--white);
   width: 100%;
-  height: 50em;
+  height: var(--card-height);
   border-radius: 2px 2px 2px 2px;
   transition: all 1s ease-out;
   margin: auto;
@@ -473,7 +463,7 @@ header > h1{
 }
 
 .flip-card-front img{
-  height: 50em;
+  height: var(--card-height);
 }
 
 .flip-card {
@@ -512,7 +502,6 @@ header > h1{
   background-color: var(--white);
   color: black;
   transform: rotateY(180deg);
-  /* opacity: 98%; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -527,6 +516,11 @@ header > h1{
   align-self: center;
   padding: .7em 2em;
   font-family: 'Canterbury';
+}
+
+.product-vid{
+  /* border: orange solid 3px; */
+  width: 100%;
 }
 
 @media (min-device-width: 1024px){
@@ -577,45 +571,48 @@ and (max-device-width: 1240px)
   .burger .bar{
     height: .1rem;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--brown);
     border-radius: 1rem; 
+    opacity: 75%;
+    transition: all .5s ease-out;
+  }
+
+  .nav-invert .bar{
+    background-color: var(--white);
+    transition: all .5s ease-in;
   }
   
   #bar2{
     width: 74%;
     align-self: flex-end;
   }
+
+  #logo{
+    width: 10em;
+    top: 0;
+  }
   
-  .logo-wrapper{
-    display: flex;
+  #logo-wrapper{
     margin: 1em auto 0;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     order: -1; /* put logo at top of navbar on mobile */
     height: fit-content;
     width: fit-content;
   }
   
-  #logo{
-    width: 11vh;
-    top: 0;
-    order: 1;
-  }
-  
-  #logo-nav-outer{
-    width: 100%;
-    height: 100%;
+  #logo-mobile-outer{
     display: flex;
-    margin: auto;
+    position: relative;
+    height: 100%;
+    width: 100%;
     justify-content: center;
+    padding: 0;
   }
   
-  #logo-nav{
-    width: 15vh;
-    margin: auto;
-    padding: 1em;
+  #logo-mobile{
     position: relative;
+    height: 100%;
+    width: 5em;
   }
   
   .navlinks{
@@ -641,7 +638,7 @@ and (max-device-width: 1240px)
     padding: 0;
     background: var(--brown);
     transform: translateX(100%);
-    transition: transform 500ms ease-in-out;
+    transition: transform .5s ease-in-out;
   }
   
   .navlinks ul li{
@@ -663,6 +660,7 @@ and (max-device-width: 1240px)
     content: '';
     width: 100%;
     bottom: 0;
+
     height: 4px;
     border-radius: 50%;
     background-color: var(--brown);
@@ -693,10 +691,25 @@ and (max-device-width: 1240px)
     height: auto;
   }
 
-  #main-content header h2{
-    width: 100%;
-    font-size: var(--smallfont);
+  #main-products header h2{
+    margin: auto;
+    font-size: var(--mediumfont);
+    padding: 0 0 3rem;
   }
 
+  .main-header a{
+    opacity: 90%;
+  }
+
+  #main-products article .flip-card{
+    height: var(--mobile-card-height);
+  }
+
+  .flip-card-front img{
+    height: var(--mobile-card-height);
+  }
+
+
+  
 
 }
