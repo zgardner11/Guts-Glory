@@ -502,11 +502,6 @@ header > h1{
   padding: 7rem 0;
 }
 
-.flip-card-inner.flipCardMobile{
-  /* flip for mobile */
-  transform: rotateY(180deg);
-}
-
 .flip-card-front img{
   height: var(--card-height);
 }
@@ -839,6 +834,11 @@ and (max-device-width: 1240px)
 
   #main-products article .flip-card{
     height: var(--mobile-card-height);
+  }
+
+  .flip-card-inner.flipCardMobile{
+    /* flip for mobile */
+    transform: rotateY(180deg);
   }
 
   .flip-card-front img{
