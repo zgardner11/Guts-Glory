@@ -154,6 +154,45 @@ button{
   border: none;
 }
 
+#parallax{
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 11px;
+  background-attachment: fixed;
+  top: 100vh;
+}
+
+#parallax header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+#parallax header > * {
+  z-index: -1;
+}
+
+#parallax header img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* transform: translateZ(-11px) scale(2); */
+}
+
+#parallax header h2{
+  color: var(--brown);
+  font-size: var(--largefont);
+  /* transform: translateZ(-11px) scale(2); */
+}
+
+
 /* Navigation */
 
 #navbar {
@@ -461,6 +500,11 @@ header > h1{
   color: white;
   font-size: 7em;
   padding: 7rem 0;
+}
+
+.flip-card-inner.flipCardMobile{
+  /* flip for mobile */
+  transform: rotateY(180deg);
 }
 
 .flip-card-front img{

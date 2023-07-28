@@ -36,6 +36,63 @@ function toggleClass( element ) {
     }
 }
 
+
+// Mobile click for product card
+
+const flipCard = document.querySelectorAll('.flip-card-inner').forEach(flipCard => {
+
+    flipCard.addEventListener('click', ()=> {
+
+        function flip() {
+            flipCard.classList.toggle("flipCardMobile");
+        }
+
+        flip();
+
+
+    console.log("working");
+    
+})
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // horizontal scrolling
 
 // const scrollContainer = document.querySelector(".photo");
