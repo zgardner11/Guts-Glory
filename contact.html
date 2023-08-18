@@ -10,7 +10,7 @@
         <script src="Scripts/main2.js" defer></script>
     </head>
 
-<body>
+<body id = "about-main">
 
     <nav id="navbar">
 
@@ -61,7 +61,9 @@
                 </li>
 
                 <li>
-                    <a href="weeklyword.html" class = "nav-border">weekly word</a>
+                    <a href="contact.html" class = "nav-border">contact</a>
+
+                    <!-- <a href="weeklyword.html" class = "nav-border">weekly word</a> -->
                 </li>
 
             </ul>
@@ -69,6 +71,55 @@
     </nav>
 
     <main>
+
+        <header class = "about-header">
+            <h2>Contact Us</h2>
+        </header>
+
+        <section id = "contact-outer">
+
+            <article class = "contact-logo">
+                <img src="Media/logo2white.PNG" alt="">
+            </article>
+
+            <article id = "contact-wrapper">
+                
+             <form action = "contactform.php" method= "POST" id = "contact-form">
+
+                 <p>
+                     <label for = "name">Name*</label>
+
+                     <input type = "text" class = "contact-name" name = "name" required>
+                 </p>
+
+                 <p>
+                     <label for = "email">Email*</label>
+
+                     <input type = "email" class = "contact-input" name = "email" required>
+                 </p>
+
+                 <!-- <p>
+                    
+
+                     <input type = "text" name = "service" required>
+                 </p> -->
+
+                 <p>
+                    <label for = "message">How can we help you today?</label>
+
+                     <textarea name = "message" rows = "4" type = "textarea"></textarea>
+
+                     <article id = "contactbutton">
+                         <button>
+                             <a class = "book-button" name = "submit">Contact</a>
+                         </button>
+                    </article>
+                 </p>
+
+                </form>
+
+            </article>
+        </section>
       
     </main>
 
@@ -85,11 +136,12 @@
             
                 <li><a href="contact.html">contact</a></li> 
 
-                <li><a href="media.html">portfolio</a></li> 
+                <li><a href="media.html">media</a></li> 
 
-                <li><a href="weeklyword.html">blog</a></li> 
+                <li><a href="weeklyword.html">weekly word</a></li> 
 
                 <li><a href="about.html#innermost">our innermost for his utmost</a></li> 
+                
             
                 <!-- <li><a href="media.html">ask us a question?</a></li>  -->
             
@@ -104,24 +156,42 @@
             <div class = "footer-item logo-footer">
             
                 <div id = "logo-wrapper">
+
                     <a href="index.html">
-                    
-                    <img src="Media/logo2white.PNG" alt="Guts and Glory logo" id = "logo">
-                    
-                    
+
+                        <img src="Media/logo2white.PNG" alt="Guts and Glory logo" id = "logo">
+
                     </a>
+                    
                 </div>
             
-                <br>
-            
-                <p>copyright © 2023 guts and glory</p>
             </div>
 
             <div class = "footer-item">
-                <h4>contact us:</h4>
-                <div class="newsletter">
-                    <input type="email" value placeholder="gutsandglory@gmail.com" name = "contact[email]" autocorrect = "off" autocapitalize="off">
-                </div>
+
+                <article class="instagram-outer">
+
+                    <a href="https://www.instagram.com/gutsandglory.co/">
+                    
+                        <img src="Media/instalogo1.svg" alt="Guts and Glory logo" id = "logo" class = "instagram">
+                    
+                    </a>
+
+                </article>
+
+                <article>
+
+                    <h4>contact us:</h4>
+                    
+                    <div class="newsletter">
+                        <input type="email" value placeholder="gutsandglory@gmail.com" name = "contact[email]" autocorrect = "off" autocapitalize="off">
+                    </div>
+
+                </article>
+
+            
+
+                
             </div>
         
 

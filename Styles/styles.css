@@ -340,7 +340,7 @@ nav a::before {
   font-size: 1.03em;
 }
 
-/* Logo */
+/* Logos */
 
 #logo{
   position: relative;
@@ -350,6 +350,13 @@ nav a::before {
 
 #logo-mobile-outer{
   display: none;
+}
+
+#logo.instagram{
+  width: 2rem;
+  margin: 3em auto;
+  border-bottom: var(--white) solid 2px;
+  padding-bottom: 1.5em;
 }
 
 /* Index */
@@ -677,6 +684,83 @@ header > h1{
   z-index: 0;
 }
 
+/* Contact */
+
+#contact-outer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  column-gap: 5em;
+}
+
+#contact-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 11em auto;
+  background-color: var(--white);
+  width: fit-content;
+  padding: 3em 4em;
+  color: var(--brown);
+  border-radius: 2px;
+}
+
+#contact-form{
+  width: 90%;
+}
+
+label{
+  color: var(--brown);
+  font-size: var(--smallfont);
+  font-weight: 200;
+} 
+
+input, textarea {
+  color: var(--brown);
+  width: 100%;
+  max-width: 25rem;
+  margin-top: .4em;
+  padding: .3rem .7rem;
+  outline: 0;
+  border: 3px var(--brown) solid;
+  border-radius: .4rem .2rem;
+  background: transparent;
+  font-size: 1rem;
+}
+
+form p{
+  width: 100%;
+  position: relative;
+  margin: 2.5em auto 0;
+  color: var(--brown);
+}
+
+#contactbutton{
+  display: flex;
+  justify-content: center;
+  /* border: orange solid 3px; */
+  width: 7rem;
+  margin: 5em auto 0;
+  background-color: var(--brown);
+  border-radius: 50px;
+  height: 3rem;
+  /* cursor: pointer; */
+}
+
+#contactbutton a{
+  cursor: pointer;
+  color: var(--white);
+  padding: 1em 2em;
+  /* padding: 2em; */
+}
+
+.contact-logo{
+  width: 30em;
+}
+
 /* Footer */
 
 footer{
@@ -685,9 +769,15 @@ footer{
   background-color: var(--brown);
   text-align: center;
   font-weight: 300;
-  padding: 1em;
+  padding: 4em;
   color: var(--white);
   border-top: var(--white) solid 2px;
+}
+
+footer #logo{
+ position: relative;
+ margin-bottom: 2em;
+ transform: scale(1.4);
 }
 
 #footer{
@@ -701,14 +791,12 @@ footer{
 footer ul{
   display: flex;
   flex: 1;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.5em 4em;
+  gap: 0 3em;
   margin: 0 auto;
   padding: 2em 0;
   width: fit-content;
-  font-size: .9em;
 }
 
 footer ul li a{
@@ -732,13 +820,17 @@ footer ul li:hover{
   flex: 1;
   font-size: 1.1em;
   font-weight: 500;
-  /* padding: 2em; */
   margin: auto;
 }
 
 .footer-item p{
   color: var(--navbar);
   line-height: 2;
+}
+
+.footer-item h4{
+  width: fit-content;
+  margin: auto;
 }
 
 footer .newsletter input{
@@ -751,12 +843,13 @@ footer .newsletter input{
   color: #e7e2e2;
   text-align: center;
   outline: none; /*removes blue highlight on focus */
-  transition: all .3s ease-in-out;
+  border: var(--white) inset 2px;
+  transition: all .2s ease-out;
 }
 
 footer .newsletter input:focus{
-  border: var(--white) solid 2px;
-  transform: scale(1.04);
+  border: var(--white) solid 3px;
+  transform: scale(1.03);
 }
 
 
@@ -832,6 +925,7 @@ and (max-device-width: 1240px)
   #logo-wrapper{
     margin: 1em auto 0;
     flex-wrap: wrap;
+    flex-direction: column;
     order: -1; /* put logo at top of navbar on mobile */
     height: fit-content;
     width: fit-content;
@@ -924,10 +1018,6 @@ and (max-device-width: 1240px)
 
   /* Index/Home */
 
-  .video{
-    height: auto;
-  }
-
   #main-products header h2{
     margin: auto;
     font-size: var(--mediumfont);
@@ -944,7 +1034,7 @@ and (max-device-width: 1240px)
 
   .flip-card-inner.flipCardMobile{
     /* flip for mobile */
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   .flip-card-front img{
@@ -969,17 +1059,35 @@ and (max-device-width: 1240px)
     width: 30ch;
   }
 
+  /* Contact */
+
+  #contact-outer{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .contact-logo{
+    width: 15em;
+  }
+
+  #contact-wrapper{
+    margin: 1em auto 7em;
+    padding: 1.5em;
+  }
 
 
   /* Footer */
 
   #footer{
     flex-direction: column;
-    row-gap: 4em;
   }
 
   #footer .logo-footer{
     order: -1;
+  }
+
+  .footer-nav{
+    flex-direction: column;
   }
 
 }

@@ -48,9 +48,6 @@ const flipCard = document.querySelectorAll('.flip-card-inner').forEach(flipCard 
         }
 
         flip();
-
-
-    console.log("working");
     
 })
 
