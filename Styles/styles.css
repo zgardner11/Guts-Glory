@@ -357,6 +357,11 @@ nav a::before {
   margin: 3em auto;
   border-bottom: var(--white) solid 2px;
   padding-bottom: 1.5em;
+  transition: all 250ms ease-out;
+}
+
+#logo.instagram:hover{
+  transform: scale(1.5);
 }
 
 /* Index */
