@@ -195,6 +195,32 @@ button{
   /* transform: translateZ(-11px) scale(2); */
 }
 
+.main-bg{
+  background: var(--brown);
+}
+
+.page-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--brown);
+  text-align: center;
+  height: 10em;
+  margin: 4rem auto 0;
+  border-bottom: var(--white) solid 2px;
+  padding-bottom: 4em;
+}
+
+.page-header h2{
+  font-size: var(--largefont);
+  color: var(--white);
+}
+
+.page-header h3{
+  color: var(--white);
+  font-size: var(--smallfont);
+}
+
 
 /* Navigation */
 
@@ -591,31 +617,7 @@ header > h1{
 
 /* About Us */
 
-#about-main{
-  background: var(--brown);
-}
 
-.about-header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--brown);
-  text-align: center;
-  height: 10em;
-  margin: 4rem auto 0;
-  border-bottom: var(--white) solid 2px;
-  padding-bottom: 4em;
-}
-
-.about-header h2{
-  font-size: var(--largefont);
-  color: var(--white);
-}
-
-.about-header h3{
-  color: var(--white);
-  font-size: var(--smallfont);
-}
 
 .about-header-two{
   display: flex;
