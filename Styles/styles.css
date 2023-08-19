@@ -1085,6 +1085,14 @@ and (max-device-width: 1240px)
 
   /* Footer */
 
+  footer ul{
+    gap: 3em;
+  }
+
+  footer ul li a{
+    line-height: 2.5;
+  }
+
   #footer{
     flex-direction: column;
   }
@@ -1096,5 +1104,7 @@ and (max-device-width: 1240px)
   .footer-nav{
     flex-direction: column;
   }
+
+ 
 
 }
