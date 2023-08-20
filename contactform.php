@@ -16,7 +16,7 @@
 
             //actions to send their message to email
 
-            $to = 'zgardner.cinema@gmail.com'; 
+            $to = 'zg@gutsandgloryco.com'; 
             $body = "";
 
             $body .= "From: " .$userName. ".\r\n";
