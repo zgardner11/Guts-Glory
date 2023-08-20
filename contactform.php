@@ -27,7 +27,7 @@
 
             //call mail function with user input as parameters
 
-            mail($to, $subject, $body);
+            mail($to, $body);
 
             // header("Location:contact.php?mailsend");
         }
