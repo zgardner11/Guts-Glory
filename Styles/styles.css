@@ -676,12 +676,15 @@ header > h1{
   margin: auto;
   border-radius: 4px;
   line-height: 1.6;
-  box-shadow:  -1px 2px 5px 0 rgba(0, 0, 0, 1);
+  box-shadow:  -1px 2px 7px rgba(255, 255, 255, 0.7);
+}
+
+.about-inner-two{
+  box-shadow:  1px 2px 7px rgba(255, 255, 255, 0.7);
 }
 
 .about-outer img{
   transform: scale(1.1);
-
 }
 
 .about-outer p{
@@ -717,16 +720,15 @@ header > h1{
 
 #gallery{
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 1em;
-  padding: 2em;
-  justify-items: center;
-  align-content: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 4em;
+  padding: 5em 0;
+  width: 100%;
 }
 
 .gallery-item{
   transition: all 250ms ease-in-out;
+  margin: auto;
 }
 
 .gallery-item:hover{
@@ -741,137 +743,106 @@ header > h1{
   border-radius: 2px;
 }
 
+.gallery-item:nth-child(4n-1) video{
+  transform: scale(.92);
+}
+
+.gallery-item:nth-child(4n) img{
+  transform: scale(1.1);
+}
+
 .img-1{
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 4;
+  grid-column: 1/ span 8;
 }
 
 .img-2{
-  grid-column-start: 6;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 5;
+  grid-column: 9/ span 3;
 }
 
 .img-3{
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 9;
+  grid-column: 1/ span 8;
 }
 
 .img-4{
-  grid-column-start: 3;
-  grid-column-end: 6;
-  grid-row-start: 4;
-  grid-row-end: 9;
+  grid-column: 9/ span 3;
 }
 
 .img-5{
-  grid-column-start: 6;
-  grid-column-end: 9;
-  grid-row-start: 5;
-  grid-row-end: 9;
+  grid-column: 1/ span 8;
 }
 
 .img-6{
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 9;
-  grid-row-end: 10;
+  grid-column: 9/ span 3;
 }
 
 .img-7{
-  grid-column-start: 7;
-  grid-column-end: 9;
-  grid-row-start: 9;
-  grid-row-end: 9;
+  grid-column: 1/ span 8;
 }
 
 .img-8{
-  grid-column-start: 3;
-  grid-column-end: 7;
-  grid-row-start: 9;
-  grid-row-end: 9;
+  grid-column: 9/ span 3;
 }
+
+.img-9{
+  grid-column: 1/ span 8;
+}
+
+.img-10{
+  grid-column: 9/ span 3;
+}
+
+.img-11{
+  grid-column: 1/ span 8;
+}
+
+.img-12{
+  grid-column: 9/ span 3;
+}
+
 
 /* Contact */
 
 #contact-outer{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+  width: 70%;
   margin: auto;
-  column-gap: 5em;
 }
 
-#contact-wrapper{
+#contact{
+  width: 100%;
+  background: var(--brown);
+  color: var(--navbar);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 11em auto;
-  background-color: var(--white);
-  width: fit-content;
-  padding: 3em 4em;
-  color: var(--brown);
-  border-radius: 2px;
+  flex-direction: column;
 }
 
-#contact-form{
-  width: 90%;
-}
-
-label{
-  color: var(--brown);
-  font-size: var(--smallfont);
-  font-weight: 200;
-} 
-
-input, textarea {
-  color: var(--brown);
-  width: 100%;
-  max-width: 25rem;
-  margin-top: .4em;
-  padding: .3rem .7rem;
-  outline: 0;
-  border: 3px var(--brown) solid;
-  border-radius: .4rem .2rem;
-  background: transparent;
-  font-size: 1rem;
-}
-
-form p{
-  width: 100%;
-  position: relative;
-  margin: 2.5em auto 0;
-  color: var(--brown);
-}
-
-#contactbutton{
-  display: flex;
-  justify-content: center;
-  /* border: orange solid 3px; */
-  width: 7rem;
-  margin: 5em auto 0;
-  background-color: var(--brown);
-  border-radius: 50px;
-  height: 3rem;
-  /* cursor: pointer; */
-}
-
-#contactbutton a{
-  cursor: pointer;
+#contact header h2{
+  font-size: var(--headerfont);
   color: var(--white);
-  padding: 1em 2em;
-  /* padding: 2em; */
+  padding-bottom: .1em;
+  margin-bottom: 1.5em;
 }
 
-.contact-logo{
-  width: 30em;
+.contact-info{
+  font-size: var(--smallfont);
+  margin: 2rem auto;
+}
+
+.contact-info > a{
+  color: var(--white);
+  border-bottom: var(--white) solid 2px;
+  padding-bottom: .4em;
+  transition: all 275ms ease-out;
+}
+
+.contact-info > a:hover{
+  border-bottom: var(--white) double 7px;
+}
+
+.contact-info #logo.instagram{
+  border: none;
 }
 
 /* Footer */
@@ -1196,12 +1167,23 @@ and (max-device-width: 1240px)
   #gallery{
     display: flex;
     flex-direction: column;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 1em;
-    padding: 2em;
+    grid-gap: 0;
+    padding: 0;
     justify-items: center;
     align-content: center;
+    max-width: 100%;
+    object-fit: contain;
+    padding: 0 1em;
+  }
+
+  #gallery figure{
+    width: fit-content;
+    object-fit: cover;
+    margin: 2em auto 0;
+  }
+
+  #gallery video{
+    width: 90vw;
   }
 
   /* Contact */

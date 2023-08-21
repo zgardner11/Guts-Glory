@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guts and Glory</title>
+        <link rel="stylesheet" href="Styles/styles.css">
+        <script src="Scripts/main.js" defer></script>
+        <script src="Scripts/main2.js" defer></script>
+    </head>
+
+<body class = "main-bg">
+
+    <nav id="navbar">
+
+        <div id="logo-mobile-outer">
+            <a href="index.html">
+                <img src="Media/logo.PNG" alt="Guts and Glory logo" id = "logo-mobile">
+            </a>
+        </div>
+
+        <div class = "burger">
+            <span class = "bar"></span>
+            <span class = "bar" id = "bar2"></span>
+            <span class = "bar"></span>
+        </div>
+
+        <section class = "navlinks"> 
+            <ul class = "navlinks-menu">
+                <li>
+                    <a href="apparel.html" class = "nav-border">apparel</a>
+                    <!-- <article class = "dropdown-nav">
+                        <ul>
+
+                            <li><a href = "apparel.html#shirts">Shirts</a></li>
+
+                            <li><a href = "apparel.html#jackets">Jackets</a></li>
+
+                            <li><a href = "apparel.html#pants">Pants</a></li>
+
+
+                        </ul>
+                    </article> -->
+                </li>
+
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+
+                <div id = "logo-wrapper">
+                    <a href="index.html">
+
+                    <img src="Media/logo.PNG" alt="Guts and Glory logo" id = "logo">
+
+                    </a>
+                </div>
+
+                <li>
+                    <a href="media.html"  class = "nav-border">media</a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class = "nav-border">contact</a>
+
+                    <!-- <a href="weeklyword.html" class = "nav-border">weekly word</a> -->
+                </li>
+
+            </ul>
+        </section>
+    </nav>
+
+    <main>
+
+        <header class = "page-header">
+            <h2>Contact Us</h2>
+        </header>
+
+        <section id = "contact-outer">
+
+            <article class = "contact-logo">
+                <img src="Media/logo2white.PNG" alt="">
+            </article>
+
+            <article id = "contact-wrapper">
+                
+             <form action = "contactform.php" method= "POST" id = "contact-form">
+
+                 <p>
+                     <label for = "name">Name*</label>
+
+                     <input type = "text" class = "contact-name" name = "name" required>
+                 </p>
+
+                 <p>
+                     <label for = "email">Email*</label>
+
+                     <input type = "email" class = "contact-input" name = "email" required>
+                 </p>
+
+                 <!-- <p>
+                    
+
+                     <input type = "text" name = "service" required>
+                 </p> -->
+
+                 <p>
+                    <label for = "message">How can we help you today?</label>
+
+                     <textarea name = "message" rows = "4" type = "textarea"></textarea>
+
+                     <article id = "contactbutton">
+                         <button>
+                             <a class = "book-button" name = "submit">Contact</a>
+                         </button>
+                    </article>
+                 </p>
+
+                </form>
+
+            </article>
+        </section>
+      
+    </main>
+
+    <footer>
+
+        <article id="footer">
+            
+        
+            <ul class="footer-nav">
+            
+                <li><a href="apparel.html">apparel</a></li>
+
+                <!-- brand bts -->
+            
+                <li><a href="contact.html">contact</a></li> 
+
+                <li><a href="media.html">media</a></li> 
+
+                <li><a href="weeklyword.html">weekly word</a></li> 
+
+                <li><a href="about.html#innermost">our innermost for his utmost</a></li> 
+                
+            
+                <!-- <li><a href="media.html">ask us a question?</a></li>  -->
+            
+                <!-- <li><a href="weeklyword.html">returns & exchanges</a></li> -->
+                
+                <!-- <li><a href="weeklyword.html">privacy policy</a></li> -->
+
+                <!-- <li><a href="weeklyword.html">terms and conditions</a></li> -->
+                
+            </ul>
+
+            <div class = "footer-item logo-footer">
+            
+                <div id = "logo-wrapper">
+
+                    <a href="index.html">
+
+                        <img src="Media/logo2white.PNG" alt="Guts and Glory logo" id = "logo">
+
+                    </a>
+                    
+                </div>
+            
+            </div>
+
+            <div class = "footer-item">
+
+                <article class="instagram-outer">
+
+                    <a href="https://www.instagram.com/gutsandglory.co/">
+                    
+                        <img src="Media/instalogo1.svg" alt="Guts and Glory logo" id = "logo" class = "instagram">
+                    
+                    </a>
+
+                </article>
+
+                <article>
+
+                    <h4>contact us:</h4>
+                    
+                    <div class="newsletter">
+                        <input type="email" value placeholder="gutsandglory@gmail.com" name = "contact[email]" autocorrect = "off" autocapitalize="off">
+                    </div>
+
+                </article>
+
+            
+
+                
+            </div>
+        
+
+        </article>
+
+    </footer>
+
+</body>
+</html>
