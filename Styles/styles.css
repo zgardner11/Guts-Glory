@@ -96,11 +96,12 @@ p {
 }
 
 h1 {
-  text-align: center;
+  text-align: start;
   font-size: var(--largefont);
   color: var(--brown);
-  opacity: 80%;
-  text-shadow: -1px 0px 2px rgba(255, 255, 255, 1);
+  width: 5ch;
+  /* opacity: 90%; */
+  text-shadow: -1px 2px 2px var(--brown);
   transition: all 300ms ease-out;
 }
 
@@ -372,37 +373,32 @@ nav a::before {
 
 #logo{
   position: relative;
-  width: 7em;
-  top: .5em;
+  width: 5em;
+  top: .4em;
 }
 
 #logo-mobile-outer{
   display: none;
 }
-
-#logo.instagram{
-  width: 2rem;
-  margin: 3em auto;
-  border-bottom: var(--white) solid 2px;
-  padding-bottom: 1.5em;
-  transition: all 250ms ease-out;
-}
-
-#logo.instagram:hover{
-  transform: scale(1.5);
-}
-
 /* Index */
+
+#main-video{
+  position: relative;
+  bottom: 2em;
+}
 
 .video {
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
   z-index: -1;
   aspect-ratio: 16/9;
   height: auto;
-  width: 100%;
+  width: 85%;
+  column-gap: 10rem;
+  margin: auto;
 }
 
 .homevid {
@@ -422,10 +418,8 @@ header > h1{
   align-items: center;
   flex-direction: column;
   background-color: var(--white);
-  /* scroll-snap-type: y proximity; */
-  /* overflow-y: scroll; */
-  min-height: 92vh;
   width: 100%;
+  padding-bottom: 7em;
 }
 
 #main-content article{
@@ -442,7 +436,6 @@ header > h1{
 }
 
 .main-header{
-  margin-top: 3em;
   flex-direction: column;
   width: 100%;
 }
@@ -474,6 +467,10 @@ header > h1{
 .main-header a:hover{
   transform: scale(1.03);
   opacity: 80%;
+}
+
+.main-header-logo{
+  display: none;
 }
 
 .main-header-button{
@@ -521,7 +518,7 @@ header > h1{
   flex-direction: column;
   display: flex;
   margin: 2em auto;
-  padding-top: 7em;
+  padding-top: 5rem;
   width: 75%;
   color: var(--white);
   font-size: .9em;
@@ -562,7 +559,7 @@ header > h1{
 
 #main-products header h2{
   color: white;
-  font-size: 7em;
+  font-size: 5.5rem;
   padding-bottom: 7rem;
   font-weight: 200;
 }
@@ -676,15 +673,15 @@ header > h1{
   margin: auto;
   border-radius: 4px;
   line-height: 1.6;
-  box-shadow:  -1px 2px 7px rgba(255, 255, 255, 0.7);
+  box-shadow:  -1px 1px 4px rgba(255, 255, 255, 0.7);
 }
 
 .about-inner-two{
-  box-shadow:  1px 2px 7px rgba(255, 255, 255, 0.7);
+  box-shadow:  1px 1px 4px rgba(255, 255, 255, 0.7);
 }
 
 .about-outer img{
-  transform: scale(1.1);
+  transform: scale(.82);
 }
 
 .about-outer p{
@@ -714,6 +711,7 @@ header > h1{
  
 .apparelvid{
   z-index: 0;
+  margin-top: 2.5em;
 }
 
 /* Media */
@@ -799,7 +797,6 @@ header > h1{
   grid-column: 9/ span 3;
 }
 
-
 /* Contact */
 
 #contact-outer{
@@ -861,7 +858,7 @@ footer{
 footer #logo{
  position: relative;
  margin-bottom: 2em;
- transform: scale(1.4);
+ transform: scale(2.5);
 }
 
 #footer{
@@ -936,6 +933,26 @@ footer .newsletter input:focus{
   transform: scale(1.03);
 }
 
+footer .contact-info{
+  margin-top: 1.5em;
+}
+
+#logo.instagram{
+  width: 2rem;
+  margin: 1.5em auto;
+  border-bottom: var(--white) solid 2px;
+  padding-bottom: 1.5em;
+  transition: all 250ms ease-out;
+  transform: scale(1.5);
+}
+
+#logo.instagram:hover{
+  transform: scale(1.7);
+}
+
+
+
+
 
 @media (min-device-width: 1024px){
   #main-products{
@@ -944,7 +961,6 @@ footer .newsletter input:focus{
     grid-auto-rows: auto;
   }
 }
-
 
 /* General responsiveness */
 
@@ -966,7 +982,6 @@ and (max-device-width: 1240px)
 
   #navbar {
     height: 10vh;
-    /* border: none; */
   }
 
   .burger {
@@ -1027,7 +1042,8 @@ and (max-device-width: 1240px)
   #logo-mobile{
     position: relative;
     height: 100%;
-    width: 8vh;
+    width: 10vh;
+    padding: .7em;
   }
   
   .navlinks{
@@ -1096,14 +1112,61 @@ and (max-device-width: 1240px)
   }
   
   .page-header{
-    padding-top: 1rem;
-    padding-bottom: 3rem;
+    padding: 5em 2em;
+    margin: auto;
+  }
+
+  .page-header h2{
+    font-size: var(--mediumfont);
   }
 
   /* Index/Home */
 
+  header > h1{
+    font-size: var(--largefont);
+  }  
+
+  .main-header-logo{
+    display: flex;
+    position: relative;
+    left: 2em;
+    justify-content: end;
+    margin-left: auto;
+    width: 50%;
+    border-radius: 2px;
+    filter: invert(1);
+  }
+  
+  #main-video{
+    bottom: 0;
+  }
+
+  #main-video header{
+    width: 100%;
+    padding: .7rem;
+  }
+
+  .video{
+    flex-direction: column;
+    align-items: start;
+    gap: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .video header{
+    display: flex;
+  }
+
+  #main-content{
+    padding-bottom: 3rem;
+  }
+
   #main-content article h2{
     font-size: var(--mediumfont);
+  }
+
+  #main-products{
+    padding-top: 2.5rem;
   }
 
   #main-products header h2{
@@ -1111,10 +1174,16 @@ and (max-device-width: 1240px)
     font-size: var(--mediumfont);
     padding: 1rem .5em 3rem;
     text-align: center;
+    color: var(--brown);
+    opacity: 80%;
   }
 
   .main-header a{
     opacity: 90%;
+  }
+
+  .main-header-button{
+    margin: 2.5em auto 0;
   }
 
   .main-header-button a{
@@ -1140,6 +1209,12 @@ and (max-device-width: 1240px)
     height: var(--mobile-card-height);
   }
 
+  /* Apparel */
+
+  .apparel-header{
+    border-top: var(--white) solid 2px;
+  }
+
   /* About Us */
 
   .about-outer{
@@ -1148,10 +1223,7 @@ and (max-device-width: 1240px)
     justify-content: center;
     width: 100%;
     padding: 2em 0;
-  }
-
-  .about-outer img{
-    transform: scale(1);
+    margin: 0 auto;
   }
 
   .about-outer p{
@@ -1159,7 +1231,23 @@ and (max-device-width: 1240px)
   }
 
   .about-inner{
-    padding: 1em 0;
+    padding: 1.5em;
+  }
+
+  .about-logo{
+    width: 50%;
+  }
+
+  /* Contact */
+
+  #contact{
+    /* margin: 5em auto; */
+    padding: 5em;
+    /* padding-bottom: 0; */
+  }
+
+  #contact-outer section:nth-child(2){
+    display: none;
   }
 
   /* Media */
@@ -1206,7 +1294,7 @@ and (max-device-width: 1240px)
   /* Footer */
 
   footer{
-    padding: 5em 1em;
+    padding: 2em 0 5em;
   }
 
   footer ul{
@@ -1221,8 +1309,20 @@ and (max-device-width: 1240px)
     padding: .5em;
   }
 
+  footer #logo{
+    transform: scale(1.2);
+    margin-bottom: 0;
+  }
+
+  .footer-nav{
+    border-top: var(--white) solid 2px;
+    border-bottom: var(--white) solid 2px;
+    padding: 4rem 0 5rem;
+  }
+
   #footer{
     flex-direction: column;
+    width: 100%;
   }
 
   #footer .logo-footer{
@@ -1234,4 +1334,22 @@ and (max-device-width: 1240px)
     width: 100%;
   }
 
+  .instagram-outer{
+    margin-top: 2.5rem;
+  }
+
+}
+
+/* Ipad */
+
+@media (min-device-width: 768px) 
+and (max-device-width: 1400px) 
+{
+  .main-header-button img{
+    transform: scale(.03);
+  }
+
+  .main-header-logo{
+    width: 30%;
+  }
 }
