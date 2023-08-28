@@ -646,7 +646,6 @@ header > h1{
   border-bottom: var(--white) solid 2px;
   background: var(--white);
   margin: 3em auto;
-
 }
 
 .about-header-two h3{
@@ -1236,6 +1235,11 @@ and (max-device-width: 1240px)
 
   .about-logo{
     width: 50%;
+    order: -1;
+  }
+
+  .about-logo-two{
+    order: 1;
   }
 
   /* Contact */
