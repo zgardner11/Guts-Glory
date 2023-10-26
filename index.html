@@ -5,9 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Guts and Glory Collective</title>
+
+        <meta name = "content" content="Glorifying God through unique, 1 of 1 original handmade shirts and other pieces of clothing. Incorporating the gospel into fash ion with a splash of rebellion.">
+        
+        <meta name = "keywords" content="Guts and Glory, Guts and Glory Co, Guts and Glory Collective, guts, glory, 1 of 1, one of one, 1/1, 1 of 1 original clothing, God, Jesus, innermost for his utmost, weekly word, handmade, shirts, T-shirt, repurposed clothing, repurposed, Christian clothing, style, fashion, gospel, rebellion, love">
+
         <link rel="stylesheet" href="Styles/styles.css">
+                
+        <link rel="icon" type="image/png" sizes="32x32" href="Media/favicon.png">
+
         <script src="Scripts/main.js" defer></script>
         <script src="Scripts/main2.js" defer></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+
     </head>
 
 <body>
@@ -30,18 +40,6 @@
             <ul class = "navlinks-menu">
                 <li>
                     <a href="apparel.html" class = "nav-border">apparel</a>
-                    <!-- <article class = "dropdown-nav">
-                        <ul>
-
-                            <li><a href = "apparel.html#shirts">Shirts</a></li>
-
-                            <li><a href = "apparel.html#jackets">Jackets</a></li>
-
-                            <li><a href = "apparel.html#pants">Pants</a></li>
-
-
-                        </ul>
-                    </article> -->
                 </li>
 
                 <li>
@@ -163,7 +161,9 @@
 
                                 <!-- <p> $20 </p> -->
 
-                                <button>Sold Out</button>
+                                <form action="/create-checkout-session" method="POST">
+                                    <button type="submit">Checkout</button>
+                                </form>
 
                             </div>
                         </div>

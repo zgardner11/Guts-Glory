@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="Styles/styles.css">
         <script src="Scripts/main.js" defer></script>
         <script src="Scripts/main2.js" defer></script>
+        <script src="Scripts/app.js" defer></script>
+        <script src="Scripts/server.js" defer></script>
+        <script src="https://www.paypal.com/sdk/js?AX-saEjoC772LF4_aIQj4IaldHQ0_IkZIPiduFUBGc1OnNAaWXFwuU1myuFPwSjLHDsjuXyPqs3dI8Xi=test&currency=USD"></script>
     </head>
 
 <body class = "main-bg">
@@ -73,54 +76,22 @@
     <main>
 
         <header class = "page-header">
-            <h2>Contact Us</h2>
+            <h2>Checkout</h2>
         </header>
 
-        <section id = "contact-outer">
+        <section>
+            <div class="product">
+              <!-- <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" /> -->
+              <div class="description">
+                <h3>Mellow Yellow</h3>
+                <h5>$20.00</h5>
+              </div>
+            </div>
+            <form action="/create-checkout-session" method="POST">
+              <button type="submit" id="checkout-button">Checkout</button>
+            </form>
+          </section>
 
-            <article class = "contact-logo">
-                <img src="Media/logo2white.PNG" alt="">
-            </article>
-
-            <article id = "contact-wrapper">
-                
-             <form action = "contactform.php" method= "POST" id = "contact-form">
-
-                 <p>
-                     <label for = "name">Name*</label>
-
-                     <input type = "text" class = "contact-name" name = "name" required>
-                 </p>
-
-                 <p>
-                     <label for = "email">Email*</label>
-
-                     <input type = "email" class = "contact-input" name = "email" required>
-                 </p>
-
-                 <!-- <p>
-                    
-
-                     <input type = "text" name = "service" required>
-                 </p> -->
-
-                 <p>
-                    <label for = "message">How can we help you today?</label>
-
-                     <textarea name = "message" rows = "4" type = "textarea"></textarea>
-
-                     <article id = "contactbutton">
-                         <button>
-                             <a class = "book-button" name = "submit">Contact</a>
-                         </button>
-                    </article>
-                 </p>
-
-                </form>
-
-            </article>
-        </section>
-      
     </main>
 
     <footer>
@@ -131,61 +102,47 @@
             <ul class="footer-nav">
             
                 <li><a href="apparel.html">apparel</a></li>
-
-                <!-- brand bts -->
             
                 <li><a href="contact.html">contact</a></li> 
 
                 <li><a href="media.html">media</a></li> 
 
-                <li><a href="weeklyword.html">weekly word</a></li> 
+                <li><a href="about.html">weekly word</a></li> 
 
                 <li><a href="about.html#innermost">our innermost for his utmost</a></li> 
-                
-            
-                <!-- <li><a href="media.html">ask us a question?</a></li>  -->
-            
-                <!-- <li><a href="weeklyword.html">returns & exchanges</a></li> -->
-                
-                <!-- <li><a href="weeklyword.html">privacy policy</a></li> -->
-
-                <!-- <li><a href="weeklyword.html">terms and conditions</a></li> -->
                 
             </ul>
 
             <div class = "footer-item logo-footer">
-            
                 <div id = "logo-wrapper">
-
                     <a href="index.html">
-
+                        
                         <img src="Media/logo2white.PNG" alt="Guts and Glory logo" id = "logo">
-
+                        
                     </a>
-                    
                 </div>
-            
             </div>
 
             <div class = "footer-item">
-
                 <article class="instagram-outer">
-
                     <a href="https://www.instagram.com/gutsandglory.co/">
                     
                         <img src="Media/instalogo1.svg" alt="Guts and Glory logo" id = "logo" class = "instagram">
                     
                     </a>
-
                 </article>
 
                 <article>
+                    <!-- <h4>get in touch:</h4> -->
 
-                    <h4>contact us:</h4>
+                        <div class="contact-info">
+                            <a href = "mailto: gutsandglorycollective@gmail.com">gutsandglorycollective@gmail.com</a>
                     
+                        </div>
+                <!--                     
                     <div class="newsletter">
                         <input type="email" value placeholder="gutsandglory@gmail.com" name = "contact[email]" autocorrect = "off" autocapitalize="off">
-                    </div>
+                    </div> -->
 
                 </article>
 
@@ -198,6 +155,6 @@
         </article>
 
     </footer>
-
+    
 </body>
 </html>
