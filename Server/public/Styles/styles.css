@@ -615,7 +615,7 @@ header > h1{
   color: var(--white);
   border-radius: 2px;
   width: fit-content;
-  opacity: 50%;
+  /* opacity: 50%; */
   align-self: center;
   padding: 1em 4em;
   font-family: 'Canterbury';
