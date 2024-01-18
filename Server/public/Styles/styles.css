@@ -81,7 +81,7 @@ body {
 }
 
 main {
-  border-top: var(--silverblue) solid 2px;
+  /* border-top: var(--brown) ridge 20px; */
 }
 
 ul {
@@ -563,7 +563,7 @@ header > h1{
   margin-bottom: 5rem;
   font-weight: 200;
   border-bottom: var(--brown) solid 3px;
-  border-radius: 2%;
+  border-radius: 3px;
 }
 
 .flip-card-front img{
