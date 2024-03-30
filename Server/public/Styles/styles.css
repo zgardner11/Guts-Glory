@@ -16,7 +16,7 @@
   --white:#e7e2e2;
   /* --white:#e7e4e0; */
   --black: rgb(4, 4, 4);
-  --brown: #4e2a2a;
+  --brown: #4d2222;
   --lightbrown: #4e2a2a70;
   
   --blue: #42969e;  
@@ -78,10 +78,6 @@ body {
   font-family: 'Canterbury', serif;
   line-height: 1.62; /* golden ratio */
   background: var(--white);
-}
-
-main {
-  /* border-top: var(--brown) ridge 20px; */
 }
 
 ul {
@@ -478,7 +474,7 @@ header > h1{
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  margin: 5em auto 0;
+  margin: 2.5em auto 0;
   /* background: var( --product-bg); */
   /* padding: 11em; */
   /* box-shadow: var(--brown) 0px 2px 7px; */
@@ -559,11 +555,15 @@ header > h1{
 #main-products header h2{
   color: var(--brown);
   font-size: 5.5rem;
-  padding: 0 2em 5rem;
-  margin-bottom: 5rem;
+  padding: 5rem 2em 2.5rem;
+  margin-bottom: 2.5rem;
   font-weight: 200;
   border-bottom: var(--brown) solid 3px;
   border-radius: 3px;
+}
+
+#main-products .product-main-header h2{
+  padding-top: 0;
 }
 
 .flip-card-front img{
@@ -609,7 +609,8 @@ header > h1{
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-bottom: 2em;
 }
 
 .flip-card-back button{
@@ -628,6 +629,11 @@ header > h1{
 
 .flip-card-back h3{
   font-size: var(--smallfont);
+}
+
+.flip-card-back img{
+  position: relative;
+  top: 0;
 }
 
 .product-vid{
@@ -977,8 +983,8 @@ footer .contact-info{
 
 /* General responsiveness */
 
-@media (min-device-width: 280px) 
-and (max-device-width: 1240px) 
+@media (min-width: 280px) 
+and (max-width: 1240px) 
 {
 
   body,html {
@@ -1183,9 +1189,9 @@ and (max-device-width: 1240px)
   }
 
   #main-products header h2{
-    margin: auto;
+    margin: 0 auto 1.5rem;
     font-size: var(--mediumfont);
-    padding: 1rem .5em 3rem;
+    padding: 1.5rem .5em;
     text-align: center;
     color: var(--brown);
     opacity: 80%;
@@ -1368,8 +1374,8 @@ and (max-device-width: 1240px)
 
 /* Ipad */
 
-@media (min-device-width: 768px) 
-and (max-device-width: 1400px) 
+@media (min-width: 768px) 
+and (max-width: 1400px) 
 {
   .main-header-button img{
     transform: scale(.03);
