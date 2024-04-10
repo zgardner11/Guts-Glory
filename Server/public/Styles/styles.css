@@ -641,6 +641,11 @@ header > h1{
   width: 100%;
 }
 
+.vertical-vid{
+  height: 75%;
+  object-fit: cover;
+}
+
 .product .main-header-button img{
   position: absolute;
   left: 9em;
@@ -1240,6 +1245,10 @@ and (max-width: 1240px)
 
   .apparel-header{
     border-top: var(--white) solid 2px;
+  }
+
+  .vertical-vid{
+    height: 55%;
   }
 
   /* About Us */
