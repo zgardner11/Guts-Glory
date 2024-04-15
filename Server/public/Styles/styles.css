@@ -87,7 +87,6 @@ ul {
 p {
   font-weight: 500;
   font-size: var(--textfont);
-  opacity: 75%;
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -512,8 +511,8 @@ header > h1{
   position: relative;
   flex-direction: column;
   display: flex;
-  margin: 2em auto;
-  padding-top: 5rem;
+  margin: auto;
+  padding-top: 2rem;
   width: 75%;
   color: var(--white);
   font-size: .9em;
@@ -538,10 +537,13 @@ header > h1{
   aspect-ratio: 3/4;
 }
 
+#main-products article .flip-card.video-aspect{
+  aspect-ratio: 9/16;
+}
+
 #main-products article h3,
 #main-products article p{
   transition: all 1s ease-in-out;
-  color: var(--black);
 }
 
 #main-products header{
@@ -554,8 +556,8 @@ header > h1{
 
 #main-products header h2{
   color: var(--brown);
-  font-size: 5.5rem;
-  padding: 5rem 2em 2.5rem;
+  font-size: var(--headerfont);
+  padding: 2.5rem 2rem .75rem;
   margin-bottom: 2.5rem;
   font-weight: 200;
   border-bottom: var(--brown) solid 3px;
@@ -564,6 +566,17 @@ header > h1{
 
 #main-products .product-main-header h2{
   padding-top: 0;
+}
+
+#main-products .homepage-header {
+  justify-content: start;
+}
+
+#main-products .homepage-header h2{
+  position: relative;
+  padding: .75rem 0;
+  left: 1rem;
+  margin-bottom: 1em;
 }
 
 .flip-card-front img{
@@ -613,18 +626,26 @@ header > h1{
   padding-bottom: 2em;
 }
 
+.flip-card-back > * {
+  font-size: 1.4em;
+}
+
 .flip-card-back button{
   background: var(--brown);
   border-radius: 2px;
   width: fit-content;
   /* opacity: 50%; */
   align-self: center;
-  padding: 1em 4em;
+  /* padding: 1em 4em; */
   font-family: 'Canterbury';
 }
 
 .flip-card-back button a{
   color: var(--white);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 1em 4em;
 }
 
 .flip-card-back h3{
@@ -636,13 +657,29 @@ header > h1{
   top: 0;
 }
 
+.product-info-box{
+  border: var(--brown) 2px solid;
+  border-radius: 2% 7%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  gap: 2em;
+  color: var(--brown);
+}
+
+.product-info-box p{
+  font-size: var(--smallfont);
+}
+
 .product-vid{
   /* border: orange solid 3px; */
   width: 100%;
 }
 
 .vertical-vid{
-  height: 75%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -709,24 +746,9 @@ header > h1{
 
 /* Apparel */
 
-.apparel-header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--brown);
-  text-align: center;
-  height: 11em;
-  margin: auto;
-}
-
-.apparel-header h2{
-  color: var(--white);
-  font-size: var(--mediumfont);
-}
-
 #main-products.apparel-page{
   width: 100%;
-  padding: 4em 7em;
+  padding: 1.5em 7em;
   margin-top: 0;
 }
  
@@ -734,11 +756,6 @@ header > h1{
   width: auto;
   padding: 1em;
 }
-
-/* #main-products.apparel{
-  width: 100%;
-  padding: 7em;
-} */
 
 /* Media */
 
@@ -1115,7 +1132,6 @@ and (max-width: 1240px)
     content: '';
     width: 100%;
     bottom: 0;
-
     height: 4px;
     border-radius: 50%;
     background-color: var(--brown);
